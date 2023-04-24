@@ -1,0 +1,23 @@
+{
+  "name": "mealdb-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "food.js",
+  "scripts": {
+    "start": "vite",
+    "build" : "tailwindcss  -i css/tailwind.css  -o css/output.css  --watch" 
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.1",
+    "vite": "^4.3.1"
+  },
+  "dependencies": {
+    "daisyui": "^2.51.5"
+  }
+}

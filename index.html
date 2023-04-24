@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MealDB</title>
+  <link rel="stylesheet" href="css/tailwind.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- header section start here -->
+  <header class="sm:h-screen">
+    <!-- navbar -->
+    <nav>
+      <section>
+        <div class="w-full sm:w-3/4 mx-auto  flex justify-evenly sm:justify-between items-center py-5 gap-14 sm:gap-0">
+          <h3 class="text-title-color font-poppins text-2xl  font-bold sm:font-semibold ">Tasty HUT</h3>
+          <button class="btn btn-warning rounded-md h-3.5 px-7 font-poppins font-bold text-sm capitalize">Sign
+            Up</button>
+        </div>
+      </section>
+    </nav>
+    <!-- hero section -->
+    <section class=" relative bg-hero-pattern bg-no-repeat bg-cover h-[50vh] sm:h-[80vh] ">
+      <div
+        class="  flex flex-col justify-center items-center sm:flex-none sm:pt-16 absolute inset-0 bg-gray-900 bg-opacity-50 ">
+        <div class="z-10 relative  space-y-3 w-11/12  sm:w-2/4 mx-auto sm:pt-10 text-opacity-100 ">
+          <h2 class=" text-[#ffffff] font-poppins font-bold text-4xl sm:text-6xl text-center">Taste Our Delicious</h2>
+          <h2 class="text-[#ffffff] font-poppins font-bold text-4xl sm:text-6xl text-center">Best Foods</h2>
+          <p class="font-poppins font-light text-center text-[#bfbbbb]">here are many variations of passages of Food
+            available,
+            but
+            the majority
+            have
+            suffered
+            alteration in some form,
+            by injected humor.</p>
+          <form onsubmit="submitForm(event)" class=" pt-4 w-10/12 mx-auto">
+            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+            <div class="relative">
+              <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 " fill="none" stroke="currentColor"
+                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+              <input type="search" id="default-search"
+                class="block  w-full p-2.5 pl-10 text-sm text-[#706F6F] border border-gray-300 rounded-lg bg-gray-50 focus:ring-black-500 "
+                placeholder="Search any food" required>
+              <button id="searchBtn" type="submit"
+                class=" text-[#100F0F] absolute px-7 top-0 right-0 bottom-0 bg-button-bg hover:bg-amber-500   rounded-lg  py-2 font-poppins font-bold text-sm capitaliz">Search</button>
+            </div>
+            <p id="warning"
+              class="text-slate-900 mt-4 text-sm rounded-md w-8/12 sm:w-5/12 mx-auto text-center font-poppins bg-yellow-300">
+            </p>
+          </form>
+
+
+        </div>
+      </div>
+    </section>
+  </header>
+  <!-- header section end here -->
+
+
+  <!-- Main section start here -->
+  <main>
+    <section class="pt-3 w-11/12 sm:w-9/12 mx-auto ">
+      <div class="mb-7">
+        <h2 class="text-center w-auto  text-[#100F0F] font-poppins font-semibold text-3xl sm:text-4xl">Your
+          favorite Food</h2>
+      </div>
+      <div id="mainDiv" class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-7">
+      </div>
+
+      <div class="my-6 text-center">
+        <button id="btnHidden" onclick="showAll()"
+          class="btn hover:bg-yellow-500 text-[#100F0F] bg-button-bg border-none  rounded-md h-3.5 px-7 font-poppins font-bold text-sm capitalize">Show
+          all</button>
+      </div>
+
+      </div>
+    </section>
+  </main>
+  <!--Main section end here -->
+
+
+
+  <!-- footer section start here -->
+  <footer class="ps-4 sm:ps-44 footer p-10 bg-neutral-200  sm:space-x-24 font-poppins">
+    <div class="text-[#403F3F]">
+      <span class="footer-title capitalize font-poppins font-bold text-lg ">Section</span>
+      <a class="link link-hover ">Home</a>
+      <a class="link link-hover ">Features</a>
+      <a class="link link-hover ">Pricing</a>
+      <a class="link link-hover ">FAQs</a>
+      <a class="link link-hover ">About</a>
+    </div>
+    <div class="text-[#403F3F]">
+      <span class="footer-title capitalize font-poppins font-bold text-lg">Section</span>
+      <a class="link link-hover ">UI/UX Design</a>
+      <a class="link link-hover ">Product Design</a>
+      <a class="link link-hover ">Back End Developer</a>
+      <a class="link link-hover ">Front End Developer</a>
+    </div>
+    <div class="text-[#403F3F]">
+      <span class="footer-title capitalize font-poppins font-bold text-slate-900 text-lg">Resource</span>
+      <a class="link link-hover">FAQe</a>
+      <a class="link link-hover">Support</a>
+      <a class="link link-hover">Privacy Policy</a>
+      <a class="link link-hover">Terms of Service</a>
+    </div>
+    <div class="text-[#403F3F]">
+      <span class="footer-title capitalize font-poppins font-bold text-slate-900 text-lg">Subscribe to our
+        newsletter</span>
+      <div class=" sm:w-9/12 text-[#403F3F] mb-3 sm:mb-0">
+        <p class="">There are many variations of passages of available, but the majority have suffered
+        </p>
+      </div>
+      <div class=" w-full">
+        <input type="text" placeholder="Email address" class="input rounded-md border border-stone-700 " />
+        <button
+          class="btn mt-3  hover:bg-yellow-500 text-[#100F0F] bg-button-bg border-none  rounded-md  px-4 py-3 ms-1 font-poppins font-bold text-sm capitalize">Subscribe
+        </button>
+
+      </div>
+    </div>
+  </footer>
+  <!-- footer section end here -->
+
+
+  <!-- Modal -->
+  <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+  <div class="modal">
+    <div id="modalDiv" class="modal-box w-11/12 max-w-5xl sm:grid grid-cols-3 ">'
+
+
+    </div>
+  </div>
+
+  <script src="food.js"></script>
+</body>
+
+</html>
